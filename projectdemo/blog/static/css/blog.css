@@ -1,0 +1,11 @@
+.post-list-img {
+    max-width: 245px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.post-detail {
+    min-height: 350px;
+}

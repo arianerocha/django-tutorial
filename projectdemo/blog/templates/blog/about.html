@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+
+
+{% block content %}
+    <div class="jumbotron row text-white rounded bg-dark pt-5 pb-5 post-detail d-flex align-items-center">
+        <div class="col-12 text-center">
+            <h1>Sobre {{ about.author.first_name }}</h1>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <p class="mt-4 text-justify">{{ about.bio }}</p>
+            </div>
+           
+        </div>
+        
+    </div>
+{% endblock %}

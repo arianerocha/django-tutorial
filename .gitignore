@@ -1,0 +1,18 @@
+*.pyc
+*~
+__pycache__
+
+*.sqlite3
+/static
+.DS_Store
+
+# env
+# ==============
+myvenv
+.python-version
+
+# editor
+# ==============
+.vscode
+
+

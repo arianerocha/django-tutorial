@@ -1,0 +1,49 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="post mt-5">
+                        <div class="w-80 mx-auto mb-9">
+                            <h1 class="font-weight-normal text-center">Blog - <span class="text-primary font-weight-bold">Meus Posts</span></h1>
+                        </div>
+                        <div class="w-lg-80 mx-auto mt-5">
+                            {% for post in posts %}
+                                <article class="row mb-5">
+                                    <div class="col-sm-5 mb-5 mb-sm-1">
+                                        <img class="img-fluid w-100 rounded post-list-img" src="http://www.fablabjoinville.com.br/uploads/2018/05/codelikeagirl.png">
+                                    </div>
+                                    <div class="col-sm-7"> 
+                                        <div class="pt-1 pr-4">
+                                            <small class="d-block text-muted mb-3">
+                                                {{ post.published_date }}
+                                            </small>
+                                            <div class="mb-7">
+                                                <h1>
+                                                    <a class="text-dark" href="{% url 'post-detail' pk=post.pk %}">{{ post.title }}</a>
+                                                </h1>
+                
+                                                <p>{{ post.text|slice:":250" }}...</p>
+                
+                                                <small class="d-block text-secondary">
+                                                    por <a class="text-dark font-weight-bold " href="{% url 'about' %}">{{ post.author.first_name }}</a>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+{% endblock %}
